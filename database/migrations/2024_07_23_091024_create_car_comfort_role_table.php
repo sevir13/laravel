@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('car_comport_role', function (Blueprint $table) {
-            $table->foreignId("car_comport_id")
+        Schema::create('car_comfort_role', function (Blueprint $table) {
+            $table->foreignId("car_comfort_id")
                 ->references("id")
                 ->on("car_comforts")
                 ->cascadeOnDelete();
