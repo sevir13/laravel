@@ -14,7 +14,7 @@ class CarSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('cars')->insert(
+        DB::table('cars')->insert([
             [
                 "name" => Str::random(10),
                 "car_comfort_id" => 1,
@@ -95,6 +95,6 @@ class CarSeeder extends Seeder
                 "travel_start" => "2024-07-20 10:00:00",
                 "travel_end" => "2024-07-20 18:00:00"
             ]
-        );
+        ]);
     }
 }

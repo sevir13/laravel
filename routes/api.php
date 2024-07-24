@@ -19,6 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("users/{id}", function (User $user) {
-    return response()->json(["success" => 1]);
-});
+Route::get("users/{user}/cars", [\App\Http\Controllers\CarController::class, "index"]);
